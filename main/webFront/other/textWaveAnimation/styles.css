@@ -1,0 +1,36 @@
+*{
+    padding : 0;
+    margin : 0;
+    box-sizing : border-box;
+}
+body{
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+.wave{
+    text-align : left;
+    display : flex;
+    flex-flow : column;
+    justify-content : center;
+}
+label{
+    font-size : 30px;
+    font-weight : 600;
+    font-family: tahoma;
+    color : silver;
+    cursor : pointer;
+    margin-bottom: 50px;
+}
+label span{
+    font-size : 30px;
+    font-weight : 600;
+    display: inline-block;
+    transition: .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+label:hover span{
+    color : #DBA11B;
+    transform: translateY(-20px);
+}
