@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+body{
+    background : #e9fcfc;
+    font-family : 'Varela Round', sans-serif;
+
+}
+.center{
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    width : 310px;
+    padding : 0 50px;
+    text-align : center;
+    transition : all .3s ease .3s;
+}
+.center button{
+    position: relative;
+    width: 100%;
+    border: none;
+    padding : 5px 0;
+    cursor : pointer;
+    outline : 0;
+    border-radius : 50px;
+    background : linear-gradient(#3d42c2, #373bae, #31349b);
+    transition : .5s 
+}
+.center button:hover{
+    background : linear-gradient(#31349b, #373bae, #3d42c2);
+}
+.center button p {
+    color: white;
+    font-size : 22px;
+    font-weight : 600;
+    text-transform: uppercase;
+    margin : 15px;
+}
+.center button .loading, .center button .fa{
+    position: absolute;
+    top: 0;
+    left : 0;
+    bottom : 0;
+    right : 0;
+}
+.center button .loading{
+    width : 0;
+    border-radius: 50px;
+    background : linear-gradient(#3d42c2, #373bae, #31349b);
+}
+.center button .fa{
+    color: white;
+    font-size : 35px;
+    line-height : 65px;
+    transform : scale(0);
+}
+ 
+.center.active{
+    padding : 0;
+}
+
+.center.active button{
+    background : #d9d9d9;
+    margin-top: 0;
+}
+.center.active p{
+    display: none;
+}
+.center.active button .loading{
+    width: 100%;
+    transition: 1s linear width;
+
+}
+.center.active button.success{
+    padding : 35px 0;
+    width : 250px;
+}
+.center.active button.success .fa{
+    transform : scale(1);
+    transition: transform  0.2s linear;
+}
