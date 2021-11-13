@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family : tahoma;
+    user-select: none;
+    font-family : 'Varela Round', sans-serif;
+}
+.wrapper{
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.wrapper .img-card{
+    position : relative;
+    width: 300px;
+    height : 400px;    
+    overflow: hidden;
+    border-radius: 3px;
+    transition: all .4s;
+}
+.wrapper .img-card:hover{
+    box-shadow : 1px 1px 6px 1px rgba(0, 0, 0, .9);
+}
+.wrapper .img-card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 180%;
+    width: 75%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .1);
+    z-index: 1;
+    transform: skew(45deg);
+    opacity: .7;
+    pointer-events: none;
+    transition: .6s all;
+}
+.wrapper .img-card:hover::before{
+    right: -180%;
+}
+.wrapper .img-card img{
+    width: 100%;
+    height : 100%;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+.wrapper .img-card:hover img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+.wrapper .img-card h2{
+    position : absolute;
+    bottom : 0;
+    width: 100%;
+    background-color : #333;
+    color : tomato;
+    line-height :2;
+    border: 1px solid #000;
+    transform : perspective(500px) rotateY(-90deg);
+    transform-origin: right;
+    transition: all .5s;
+}
+.wrapper .img-card:hover h2{
+    transform :rotateY(0);
+}
+.wrapper .img-card ul {
+    position : absolute;
+    left : 0;
+    top : 0;
+    list-style-type: none;
+}
+.wrapper .img-card ul li {
+    height : 40px;
+    width : 40px;
+    line-height : 40px;
+    background-color: #333;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    transform: perspective(800px) rotateY(90deg);
+    transform-origin: left;
+    cursor: pointer;
+}
+.wrapper .img-card:hover ul li:nth-child(1){
+    transition: all .2s ease-in;
+}
+.wrapper .img-card:hover ul li:nth-child(2){
+    transition: all .6s ease-in;
+}
+.wrapper .img-card:hover ul li:nth-child(3){
+    transition: all .8s ease-in;
+}
+.wrapper .img-card:hover ul li:nth-child(4){
+    transition: all 1s ease-in;
+}
+.wrapper .img-card ul li a i{
+    color: tomato;
+    background-color : rgba(255, 255, 255, 0);
+}
+.wrapper .img-card:hover ul li {
+    transform : rotateY(0);
+}
+.wrapper .img-card ul li a{
+    display: inline-block;
+}
+.wrapper .img-card ul li a span{
+    position : absolute;
+    left : 10px;
+    top: -1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #333;
+    color : tomato;
+    border-bottom : 1px solid rgba(0, 0, 0, .1);
+    padding : 0 0px;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+    transition: all .2s linear;
+    transform-origin: left;
+}
+.wrapper .img-card ul li:hover a span{
+    opacity: 1;
+    pointer-events: auto;
+    left: 30px;
+}
