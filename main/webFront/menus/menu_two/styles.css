@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family : 'Varela Round', sans-serif;
+}
+body{
+    user-select: none;
+}
+.menu-container{
+    width: 300px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+.menu-container .button{
+    position : relative;
+    background-color: #1b1b1b;
+    color : #fff;
+    font-size: 20px;
+    width: 150px;
+    line-height: 30px;
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+    padding : 8px 20px;
+    border-radius: 20px;
+    cursor : pointer;
+    transition : width .4s linear;
+}
+.menu-container .button.expand{
+    width: 100%;
+}
+.menu-container .button.expand .hamburger:before{
+    content : "\f00d";
+}
+.menu-container ul{
+    list-style-type: none;
+    position: absolute;
+    top: 60px;
+    display: block;
+    background-color: #1b1b1b;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .3);
+    display: none;
+}
+.menu-container ul::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 18px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 11px solid #1b1b1b;
+}
+.menu-container ul li{
+    line-height : 35px;
+    padding: 8px 20px;
+    border: 1px solid transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+.menu-container ul li:last-child{
+    border-bottom: none;
+}
+.menu-container ul li:hover{
+    box-shadow: inset 0 0 5px #33ffff,
+                inset 0 0 10px #66ffff;
+}
+.menu-container ul li:hover:first-child{
+    border-radius: 5px 5px 0 0;
+}
+.menu-container ul li:hover:last-child{
+    border-radius: 0 0 5px 5px;
+}
+.menu-container ul li a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.menu-container ul li:hover a{
+    color: cyan;
+}
+
+
+
+
