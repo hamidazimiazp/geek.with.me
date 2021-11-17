@@ -1,0 +1,60 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width : 100%;
+    height: 100vh;
+    background : linear-gradient(to left top, #e1e4cc 0%, #9db6a9 100%);
+}
+.social-buttons{
+    position : absolute;
+    right: 70px;
+    bottom : 70px;    
+    text-align : center;
+}
+.social-buttons label i{
+    position: absolute;
+    width : 50px;
+    height : 50px;
+    font-size: 30px;
+    background-color: rgb(20, 160, 55);
+    border-radius: 50%;
+    color : #fff;
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    padding: 8px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    border: 2px solid #fff;
+}
+.social-buttons label a{
+    text-decoration: none;
+}
+.social-buttons label a:hover{
+    text-decoration: none;
+}
+.social-buttons label i.fa-share-alt{
+    z-index : 1;
+    background-color: rgb(5, 2, 15);
+}
+input#check:checked ~ .social-buttons label > a:nth-child(3n-1) i{
+    transform: translateX(-70px);
+    transition: all .4s ease-in-out;
+    background-color : red;
+}
+input#check:checked ~ .social-buttons label > a:nth-child(3n-2) i{
+    transform: translate(-70px, -70px);
+    transition: all .6s ease-in-out;
+
+}
+input#check:checked ~ .social-buttons label > a:nth-child(3n-3) i{
+    transform: translateY(-70px);
+    transition: all .8s ease-in-out;
+    background-color : #0088cc;
+}
+input#check{
+    display: none;
+}
