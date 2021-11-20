@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family : tahoma;
+}
+header{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#myVideo{
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    z-index: -1;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    z-index: 1;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 2;
+    border-radius: 0 50% 350% 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    transition : all .8s cubic-bezier(.9, 0, .33, 1);
+}
+.hamber-menu{
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    cursor: pointer;
+}
+.hamber-menu span{
+    width : 50px;
+    height: 3px;
+    background-color : red;
+    display: block;
+    margin: 5px;
+    border-radius: 3px;
+    transition : all .8s cubic-bezier(.9, 0, .33, 1);
+
+}
+.hamber-menu span.bottom-bar{
+    width: 30px;
+}
+.nav-content{
+    text-align : left;
+    padding : 40px;
+    margin-top: 50px;
+}
+.nav-content .page-links ul {
+    list-style-type : none; 
+}
+.nav-content .page-links ul li{
+    line-height: 60px;
+    display: block;
+    margin-bottom: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 150px;
+}
+.nav-content .page-links ul li a i{
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: 1px;
+    cursor : pointer;
+    color: #000;
+    position : relative;
+    left: 50px;
+    z-index : 1;
+    transition : all .8s cubic-bezier(.9, 0, .33, 1);
+}
+.nav-content .page-links ul li a{
+    text-decoration : none;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+}
+.nav-content .page-links ul li:hover a p,
+.nav-content .page-links ul li:hover a i{
+    color : tomato;
+}
+
+.nav-content .page-links ul li a p{
+    transition : all .8s cubic-bezier(.9, 0, .33, 1);
+    color : #000;
+    transform: translate3d(-25px,0,0);
+    display: inline;
+    position: absolute;
+    left: 250px;
+}
+
+.nav-content .social-icons ul{
+    list-style-type : none;
+    position: relative;
+    left: 50px;
+    transition : all .8s cubic-bezier(.9, 0, .33, 1);
+}
+.nav-content .social-icons ul li{
+    display : block;
+    margin: 30px 15px 0 0;
+    position: relative; 
+    overflow: hidden;
+}
+.nav-content .social-icons ul li a{
+    font-size: 24px;
+    color : #000;
+    transition : all .3s linear;
+}
+.nav-content .social-icons ul li a:hover{
+    color : tomato;
+}
+#check{
+    display : none;
+}
+#check:checked ~ nav{
+    width: 300px;
+    border-radius : 0;
+}
+#check:checked ~ nav .hamber-menu span.top-bar{
+    transform: rotate(45deg);
+}
+#check:checked ~ nav .hamber-menu span.bottom-bar{
+    width: 50px;
+    transform: rotate(-45deg) translate(10px, -12px);
+}
+#check:checked ~ nav .hamber-menu span.middle-bar{
+    width: 0;
+}
+#check:checked ~ nav .nav-content .page-links ul li a i{
+    color : #ddd;
+    left: 0;
+}
+#check:checked ~ nav .nav-content .page-links ul li a{
+    position: relative;
+    left: 0;
+}
+#check:checked ~ nav .nav-content .page-links ul li a p{
+    color : #000;
+    opacity: 1;
+    left: 65px;
+    top: -22px;
+    text-align: left;
+}
+#check:checked ~ nav .nav-content .page-links ul li:hover a p{
+    color : tomato;
+}
+#check:checked ~ nav .nav-content .social-icons ul {
+    display: flex;
+}
