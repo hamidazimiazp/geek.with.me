@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'M PLUS 2', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color : #C776E5;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.card{
+    background-color :#fff;
+    height: 380px;
+    width : 300px;
+    margin: auto;
+    border-radius: 5px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+}
+.card .content{
+    color : #202020;
+    text-align : center;
+    transform: translateZ(50px);
+}
+.card .content .user{
+    height: 100px;
+    width: 100px;
+    background-color : #C776E5;
+    border: 1px solid #c654f0;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+.card .content .user .fa-user{
+    color: #fff;
+    font-size: 40px;
+    line-height: 100px;
+}
+.card .content header{
+    margin: 20px 0;
+    font-size: 32px;
+    font-weight : 600;
+}
+.card .content .follow-us{
+    font-size : 23px;
+    font-weight : 600;
+}
+.card .content .icons{
+    margin: 20px 0 10px 0;
+}
+.card .content .icons a{
+    margin: 0 4px;
+    transform-style: preserve-3d;
+
+}
+.card .content .icons a span{
+    height: 45px;
+    width :45px;
+    background-color: #C776E5;
+    border: 1px solid #c654f0;
+    line-height: 45px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+
+}
