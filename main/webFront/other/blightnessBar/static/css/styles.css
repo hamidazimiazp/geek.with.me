@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    background: url("../images/green.jpg") center center no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.brightness-box{
+    width: 400px;
+    height: 60px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    position: relative;
+    bottom: 50px;
+}
+.brightness-box i{
+    margin: 0 10px;
+}
+.brightness-box input#range{
+    width: 100%;
+    -webkit-appearance: none;
+    background-color: #0a85ff;
+    height: 3px;
+    outline: none;
+}
+#range::-webkit-slider-thumb,
+#range::-moz-range-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    background: url("../images/green.jpg") center center no-repeat;
+    background-size: cover;
+}
