@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: #232c33;
+}
+.navigation {
+    position: relative;
+    height: 100vh;
+    width: 60px;
+    background-color: #2b343b;
+    box-shadow: 10px 0 0 #4187f6;
+    overflow-x: hidden;
+    transition: all .4s linear;
+    transform-origin: left center;
+}
+.navigation:hover{
+    width: 300px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 0 0 5px;
+    list-style-type: none;
+}
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+.navigation ul li:hover{
+    background-color: #202c36;
+}
+.navigation ul li.active{
+    background-color: #4187f6;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.navigation ul li a{
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+.navigation ul li.active a::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -30px;
+    background-color: #2b343b;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 #4187f6;
+}
+.navigation ul li.active a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    background-color: #2b343b;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 #4187f6;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon{
+    position: relative;
+    font-size: 1.5em;
+    z-index: 1;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+    font-family: sans-serif;
+}
