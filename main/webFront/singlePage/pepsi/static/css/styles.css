@@ -249,15 +249,11 @@ ul.thumb li img{
         margin: 0 30px;
     }
 }
+
 @media screen and (max-width: 540px)  {
     .navigation{
         display: none;
     }
-    aside ul.social{
-        right: 5%;
-    }
-}
-@media screen and (max-width: 540px)  {
     .SideNav{
         display: flex;
     }
@@ -278,7 +274,7 @@ ul.thumb li img{
         top: 45%;
     }
 }
-@media screen and (max-width: 420px){
+@media screen and (max-width: 470px){
     aside ul.social{
         right: 7%;
         top: 25%;
