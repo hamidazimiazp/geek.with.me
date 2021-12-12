@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pepsi | Home</title>
+        <link rel="stylesheet" href="static/css/styles.css">
+        <meta name="author" content="Hamid Azimi">
+    </head>
+    <body>
+        <section class="sec">
+            <header>
+                <a href="/"><img src="static/images/logo.png" alt="pepsi logo" class="logo"></a>
+                <nav class="navigation">
+                    <ul class="big-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="hamber">
+                    <p class="hamber-top"></p>
+                    <p class="hamber-middle"></p>
+                    <p class="hamber-bottom"></p>
+                </div>
+            </header>            
+            
+            <!-- navigation for small devices -->
+            <nav class="SideNav">
+                <span class="close">&times;</span>
+                <ul class="">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <main>
+                <div class="content">
+                    <div class="textBox">
+                        <h2>
+                            That's What<br /><span>I like</span>
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Enim illo tempora commodi similique iusto quod labore
+                            consequatur obcaecati deleniti, fugiat voluptatem repellat 
+                            alias error cum quasi perferendis! Exercitationem, 
+                            reprehenderit dolorem.
+                        </p>
+                        <a href="#">View All Products</a>
+                    </div>
+                    <div class="imgBox">
+                       <img class="pepsi-img" src="static/images/pepsi001.png" alt="pepsi image 1">
+                    </div>
+                    <aside>
+                        <ul class="social">
+                            <li><a href="#facebook"><img src="static/images/facebook.png" alt=""></a></li>
+                            <li><a href="#instagram"><img src="static/images/instagram.png" alt=""></a></li>
+                            <li><a href="#twitter"><img src="static/images/twitter.png" alt=""></a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </main>
+            <footer>
+                <ul class="thumb">
+                    <li><img onclick="changeImage(this.src);changeBgColor('#e60c2c')" src="static/images/pepsi002.png" alt="pepsi image 2"></li>
+                    <li><img onclick="changeImage(this.src);changeBgColor('#1e1e1e')" src="static/images/pepsi003.png" alt="pepsi image 3"></li>
+                    <li><img onclick="changeImage(this.src);changeBgColor('#0062be')" src="static/images/pepsi001.png" alt="pepsi image 1"></li>
+                </ul>
+            </footer>
+        </section>
+        <script src="static/js/index.js"></script>
+    </body>
+</html>

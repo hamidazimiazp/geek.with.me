@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    user-select: none;
+}
+/* header */
+section.sec{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background-color: #0062be;
+    transition: .5s;
+    overflow-x: hidden;
+}
+section header{
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section header .logo{
+    position: relative;
+    max-width: 80px;
+}
+section header ul.big-nav{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+}
+section header ul.big-nav li {
+    list-style-type: none;
+}
+
+section header ul.big-nav li a{
+    color: #fff;
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+    transition: .2s all linear;
+}
+section header ul.big-nav li:hover a{
+    transform: translateY(-3px);
+}
+.hamber{
+    cursor: pointer;
+    display: none;
+}
+.hamber > *{
+    width: 50px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: #fff;
+    margin-top: 5px;
+}
+/* small nav */
+.SideNav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    width: 300px;
+    z-index: 99999;
+    margin-right: -300px;
+    transition: margin-right .4s linear;
+    display: none;
+}
+.SideNav ul{
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.SideNav ul li {
+    position: relative;
+    width: 80%;
+    text-align: center;
+    list-style-type: none;
+    margin: 50px auto;
+}
+.SideNav ul li a{
+    text-decoration: none;
+    color: #111;
+    font-size: 20px;
+}
+.close{
+    position: absolute;
+    left: 50%;
+    top: 7%;
+    font-size: 55px;
+    transform: translate(-50%);
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.5);
+}
+.SideNav.active{
+    margin-right: 0;
+}
+/* end small nav */
+/* end header */
+/* main */
+main{
+    margin-top: 20px;
+}
+main .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .content .textBox{
+    position: relative;
+    max-width: 600px;
+}
+main .content .textBox h2{
+    color: #fff;
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 1.5em;
+    text-transform: uppercase;
+}
+main .content .textBox h2 span{
+    font-size: 2em;
+}
+main .content .textBox p {
+    color: #fff;
+    line-height: 28px;
+}
+main .content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    color: #111;
+    background-color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+main .content .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+main .content .imgBox img{
+    max-width: 260px;
+}
+aside ul.social{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+aside ul.social li {
+    list-style-type: none;
+    margin-top: 20px;
+}
+aside ul.social li a{
+    display: inline-block;
+    filter: invert(1);
+    margin: 5px 0;
+    transform: scale(.6);
+}
+/* end main */
+/* footer */
+footer ul.thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%);
+    display: flex;
+}
+ul.thumb li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: .3s linear all;
+}
+ul.thumb li:hover{
+    transform: translateY(-20px);
+}
+ul.thumb li img{
+    max-width: 40px;
+}
+/* end footer */
+
+/* responsive */
+@media screen and (max-width: 960px)  {
+    main .content .textBox{
+        max-width: 440px;
+    }
+    main .content .textBox h2{
+        font-size: 3em;
+    }
+    footer ul.thumb{
+        bottom: 15px;
+    }
+    aside ul.social{
+        right: 5%;
+    }
+}
+@media screen and (max-width: 720px)  {
+    section header{
+        padding: 20px 60px;
+    }
+    section header .logo{
+        max-width: 72px;
+    }
+    section header ul.big-nav li a{
+        margin-left: 25px;
+    }
+    main .content{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    main .content .imgBox{
+        justify-content: center;
+    }
+    main .content .imgBox img{
+        max-width: 200px;
+    }
+    main .content .textBox{
+        margin-top : 150px;
+        text-align: center;
+    }
+    aside ul.social{
+        top: 30%;
+        right: 160px;
+    }
+    footer ul.thumb{
+        top: 50%;
+    }
+    ul.thumb li{
+        margin: 0 30px;
+    }
+}
+@media screen and (max-width: 540px)  {
+    .navigation{
+        display: none;
+    }
+    aside ul.social{
+        right: 5%;
+    }
+}
+@media screen and (max-width: 540px)  {
+    .SideNav{
+        display: flex;
+    }
+    section header{
+        padding: 20px 40px;
+    }
+    section header .logo{
+        max-width: 55px;
+    }
+    .hamber{
+        display: block;
+    }
+    aside ul.social{
+        right: 75px;
+        top: 25%;
+    }
+    footer ul.thumb{
+        top: 45%;
+    }
+}
+@media screen and (max-width: 420px){
+    aside ul.social{
+        right: 7%;
+        top: 25%;
+    }
+    footer ul.thumb{
+        top: 41%;
+    }
+}
+/* end responsive */
