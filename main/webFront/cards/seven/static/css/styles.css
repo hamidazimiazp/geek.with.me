@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf0f3;
+}
+.wrapper,
+.wrapper .img-area,
+.wrapper .social-icons a,
+.wrapper .buttons button{
+    background-color: #ecf0f3;
+    box-shadow: -3px -3px 7px #ffffff,
+                3px  3px 5px #ceced1;
+}
+.wrapper{
+    padding: 30px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;    
+}
+.top-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.top-buttons a {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: #44476a;
+}
+.top-buttons a:hover{
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px  3px 5px #ceced1;
+}
+.wrapper .img-area{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .img-area .inner-area{
+    height: calc(100% - 25px);
+    width: calc(100% - 25px);
+    border-radius: 50%;
+}
+.wrapper .img-area .inner-area img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.wrapper .name{
+    font-size: 23px;
+    font-weight: 500;
+    color: #31344b;
+    margin: 10px 0 5px 0;
+}
+.wrapper .about{
+    font-weight: 400;
+    color: #44476a;
+    font-size: 16px;
+}
+.wrapper .social-icons{
+    margin: 20px 0 25px 0;
+}
+.wrapper .social-icons a{
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+.wrapper .social-icons a .instagram{
+    color: #e1306c;
+}
+.wrapper .social-icons a .twitter{
+    color: #1da1f2;
+}
+.wrapper .social-icons a .github{
+    color: #111111;
+}
+.wrapper .social-icons a .youtube{
+    color: #ff0000;
+}
+.wrapper .social-icons a:hover,
+.wrapper .buttons button:hover{
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset 3px  3px 5px #ceced1;
+
+}
+.wrapper .buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.wrapper .buttons button{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    font-size: 17px;
+    cursor: pointer;
+    color: #31344b;
+}
+.wrapper .buttons button:first-child{
+    margin-right: 10px;
+}
+.wrapper .buttons button:last-child{
+    margin-left: 10px;
+}
+.wrapper .social-activities{
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 5px;
+    justify-content: space-evenly;
+}
+.wrapper .social-activities .row{
+    color: #31344b;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+}
+.wrapper .social-activities .row::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #e0e6eb;
+    margin-left: -15px;
+}
+.wrapper .social-activities .row:first-child:before{
+    background: none;
+}
+.wrapper .social-activities .row .second{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: all .3s ease;
+    pointer-events: none;
+}
+.wrapper .social-activities .row:hover .second{
+    opacity: 1;
+    vertical-align: -2px;
+    
+}
+.wrapper .social-activities .row ion-icon{
+    vertical-align: -2px;
+}
