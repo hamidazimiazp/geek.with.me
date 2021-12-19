@@ -1,0 +1,221 @@
+.dark{
+    --bg: hsl(230, 17%, 14%);
+    --bg-top: hsl(232, 19%, 15%);
+    --bg-card: hsl(228, 28%, 20%);
+    --subtext: hsl(228, 34%, 66%);
+    --header-text: hsl(0, 0%, 100%);
+    --hover: #3a3458;
+    --toggler: linear-gradient(to right, 
+                                hsl(210, 78%, 56%),
+                                hsl(146, 68%, 55%)); 
+    --box-shadhow : -3px -3px 7px #181818,
+                     3px  3px 5px #1b1b1b;
+}
+.light{
+    --bg: hsl(0, 0%, 100%);
+    --bg-top: hsl(225, 100%, 98%);
+    --bg-card: hsl(227, 47%, 96%);
+    --subtext: hsl(228, 12%, 44%);
+    --header-text: hsl(230, 17%, 14%);
+    --hover: unset;
+    --toggler: #e0ddee;
+    --box-shadhow : -3px -3px 7px #ffffff,
+                     3px  3px 5px #ceced1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: var(--bg) !important;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.container-1{
+    width: 80%;
+}
+/* header headline */
+header section:first-child{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+header section .header-headline .header-headline-1{
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--header-text);
+}
+.head-title{
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--subtext);
+}
+/* dark/light mode toggle */
+.header-toggler{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--header-text);
+}
+.header-toggler div{
+    font-weight: 700;
+}
+.toggler{
+    width: 45px;
+    min-width: 45px;
+    height: 24px;
+    margin-left: 10px;
+    background-color: hsl(230, 22%, 74%);
+    border-radius: 20px;
+    cursor: pointer;
+    background-image: var(--toggler);
+}
+.toggler .toggler-circle{
+    margin: 2px 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: var(--bg);
+    transition : all .3s ease-in-out;
+}
+/* social media card section */
+header section:last-child{
+    display: flex;
+    justify-content: space-evenly;
+}
+.header-card{
+    padding: 25px 30px;
+    background-color: var(--bg-card);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: var(--box-shadhow);
+}
+.header-card .header-card-1{
+    margin: 10px 0 10px 0;
+    color: var(--subtext);
+    font-weight: 700;
+}
+.header-card .header-card-1 .header-card-1-name{
+    font-size: 13px;
+}
+.header-card .header-card-2{
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--header-text);
+}
+.header-card .header-card-3{
+    color: var(--subtext);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+.header-card .header-card-4{
+    margin-top: 20px;
+}
+.facebook{
+    border-top: 3px solid hsl(208, 92%, 53%);
+}
+.twitter{
+    border-top: 3px solid hsl(203, 89%, 53%);
+}
+.instagram{
+    position: relative;
+    overflow: hidden;
+}
+.instagram::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #fdc468, #df4996);
+}
+.youtube{
+    border-top: 3px solid hsl(348, 97%, 39%);
+}
+.fa-facebook{
+    color: hsl(208, 92%, 53%);
+}
+.fa-instagram{
+    background: linear-gradient(to right, #fdc468, #df4996);
+    background-clip: text;
+    color: transparent;
+}
+.fa-twitter{
+    color: hsl(203, 89%, 53%);
+}
+.fa-youtube{
+    color: hsl(348, 97%, 39%);
+}
+.increase,
+.decrease{
+    font-size: 12px;
+    font-weight: 700;
+}
+.increase,
+.increase i{
+    color: hsl(163, 72%, 41%);
+}
+.decrease,
+.decrease i{
+    color: hsl(365, 69%, 56%);
+}
+/* main - overview section */
+main{
+    margin-bottom: 20px;
+}
+.main-card{
+    background-color: var(--bg-card);
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: var(--box-shadhow);
+}
+.main-card .card-content-top,
+.main-card .card-content-bottom{
+    display: flex;
+    justify-content: space-between;
+    color: var(--subtext);
+    margin-top: 20px;
+}
+.main-card .card-content-top i{
+    line-height: 26px;
+}
+.main-card .card-content-bottom div p{
+    font-size: 26px;
+    color: var(--header-text);
+    font-weight: 700;
+}
+.main-card .card-content-bottom .increase,
+.main-card .card-content-bottom .decrease{
+    margin-top: 10px;
+}
+.content-lable{
+    text-align: center;
+    color: var(--subtext);
+    margin-top: 12px;
+}
+/* footer section */
+footer p{
+    text-align: center;
+    color: var(--subtext);
+    font-size: 14px;
+}
+footer p a{
+    color: var(--subtext);
+}
+footer p a:hover{
+    color: var(--header-text);
+    text-decoration: none;
+}
