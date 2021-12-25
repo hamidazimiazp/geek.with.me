@@ -1,0 +1,38 @@
+.toggle-switch{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.toggle-switch label{
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 30px;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.toggle-switch label::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee;
+    box-shadow: inset 0 0 1px 1px #ddd;
+    transition: all .3s ease-in-out;
+}
+.toggle-switch input:checked + label{
+    background-color: rgb(157, 213, 255);
+}
+.toggle-switch input:checked + label::after{
+    background-color: rgb(34, 151, 255);
+    left: calc(80px - 40px);
+}
+.toggle-switch input{
+    display: none;
+}
