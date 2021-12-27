@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: #fff;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container h2{
+    font-size: 25px;
+    color: #888;
+    text-align: center;
+    font-weight: 900;
+}
+.container .list-of-elements{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 650px;
+    min-width: 320px;
+}
+.form-elements{
+    position: relative;
+    width: 130px;
+    height: 130px;
+}
+.form-elements input{
+    display: none;
+}
+.form-elements label{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+                rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    text-align: center;
+    transition: all .2s ease-in-out;
+    border-radius: 5px;
+}
+.form-elements .icon{
+    font-size: 30px;
+    color: #555;
+    transition: all .2s ease-in-out;
+}
+.form-elements .title{
+    margin-top: 10px;
+    font-weight: 600;
+    padding: 5px 0;
+    transition: all .2s ease-in-out;
+}
+.form-elements label::after{
+    content: "✔";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 8px;
+    left: 8px;
+    background-color: #0B8457;
+    color: #fff;
+    text-align: center;
+    line-height: 14px;
+    font-weight: 600;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(.5);
+    transition: all .2s ease-in-out;
+}
+.form-elements input:checked + label::after{    
+    opacity: 1;
+    transform: scale(1);
+}
+.form-elements input:checked + label{    
+    border-color: #0B8457
+}
+.form-elements input:checked + label .icon{    
+    color: #0B8457
+}
+.form-elements input:checked + label .title{    
+    color: #0B8457
+}
