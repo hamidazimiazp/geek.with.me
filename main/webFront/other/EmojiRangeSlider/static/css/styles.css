@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.root{
+    background: linear-gradient(#fd8d58, #dc611e) no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper{
+    background-color: #f6f6f6;
+    padding: 30px 40px;
+    border-radius: 10px;
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper .section{
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+}
+.wrapper .section .emojis{
+    width: 500%;
+    display: flex;
+    flex-direction: column;
+}
+.section .emojis li{
+    list-style-type: none;
+    height: 20%;
+    width: 100%;
+    transition: all .4s ease-in-out;
+}
+.section .emojis li img{
+    height: 147px;
+    width: 147px;
+}
+.wrapper .slider{
+    height: 12px;
+    width: 100%;
+    background-color: #d9d9d9;
+    margin-top: 40px;
+    position: relative;
+    border-radius: 50px;
+}
+.slider input{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    background: none;
+}
+.slider input::-moz-range-thumb{
+    height: 0;
+    width: 0;
+}
+.slider input::-webkit-slider-thumb{
+    height: 0;
+    width: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+.slider .progress-bar{
+    height: 100%;
+    width: 0%;
+    background-color: rgb(36, 33, 33);
+    border-radius: 50px;
+    background: linear-gradient(45deg, #fd8d58, #dc611e) no-repeat;
+}
+.slider .thumb{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    background-color: #dc611e;
+    border-radius: 50%;
+    z-index: 3;
+    padding: 2px;
+    pointer-events: none;
+}
+.slider .thumb span{
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#fd8d58, #dc611e) no-repeat;
+    border: 2px solid #f6f6f6;
+    border-radius: 50%;
+    cursor: pointer;
+}
