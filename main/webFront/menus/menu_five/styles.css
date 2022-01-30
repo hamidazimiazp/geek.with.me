@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background: #f9e8ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 10px 10px 0 #0000001a;
+    border-radius: 7px;
+    overflow: hidden;
+}
+.menu div{
+    padding: 20px 50px;
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: transform .3s linear;
+}
+.menu div span{
+    position: absolute;
+    left: 0;
+    top: 100%;
+    color: #ff5361;
+    height: 100%;
+    width: 100%;
+    padding: 20px 50px;
+    border-bottom: 5px solid #ff5361;
+}
+.menu div:hover{
+    transform: translateY(-100%);
+}
