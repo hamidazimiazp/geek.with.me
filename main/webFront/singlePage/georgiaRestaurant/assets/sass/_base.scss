@@ -1,0 +1,54 @@
+// colors
+$color-dark: #262626;
+$color-dark2: #1f1d1d;
+$color-black: #000;
+$color-white: #fff;
+$color-primary: #d3ab55;
+$color-secondary: #bbb;
+
+// fonts
+$font-dancingScript: 'Dancing Script', cursive;
+$font-josefinSans: 'Josefin Sans', sans-serif;
+$font-nunito: 'Nunito', sans-serif;
+
+// mixins
+@mixin centering($top:initial, $left:initial, $right:initial, $bottom:initial,$x:0, $y:0){
+    position: absolute;
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+    transform: translate($x, $y);
+}
+
+@mixin flexLayout($justifyContent:center, $alignItems:center, $flexDirection:row, $flexWrap:nowrap){
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
+    flex-wrap: $flexWrap;
+}
+
+@mixin textStyles($fontWeight : 300, $letterSpacing: 0, $textTransform: lowercase) {
+    font-weight: $fontWeight;
+    letter-spacing: $letterSpacing;
+    text-transform: $textTransform;
+}
+
+// custom
+%fullSpace{
+    width: 100%;
+    height: 100%;
+}
+
+// base styles
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $color-dark;
+    user-select: none;
+    overflow-x: hidden;
+}

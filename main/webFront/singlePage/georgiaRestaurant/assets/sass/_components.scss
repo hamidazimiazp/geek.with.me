@@ -1,0 +1,195 @@
+.hamburger-menu{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top : 10%;
+    right: 5%;
+    z-index: 300;
+    .menu{
+        @extend %fullSpace;
+        @include flexLayout($flexDirection:column, $justifyContent:space-around);
+        cursor: pointer;
+        transition: transform .5s;
+
+        &-line{
+            width: 100%;
+            height: 4px;
+            background-color: $color-primary;
+            transition: all .5s .5s;
+            transform-origin: right;
+        }
+    }
+}
+.logo{
+    font-size: 70px;
+    color: $color-primary;
+    display: block;
+    width: 110px;
+    height: 110px;
+    border: 3px solid $color-primary;
+    border-radius: 50%;
+    @include flexLayout();
+    text-decoration: none;
+    margin-right: 20px;
+
+    @media (max-width:540px) {
+        font-size: 40px;
+    }
+}
+.main-name{
+    font-family: $font-nunito;
+    font-size: 50px;
+    color: $color-secondary;
+    @include textStyles($letterSpacing:2px,$textTransform:Uppercase,$fontWeight:300);
+
+    @media (max-width:540px) {
+        font-size: 25px;
+    }
+}
+.sub-name{
+    font-family: $font-josefinSans;
+    font-size: 18px;
+    color: $color-secondary;
+    text-align: center;
+    @include textStyles($letterSpacing:2px,$textTransform:Uppercase,$fontWeight:300);
+
+    @media (max-width:540px) {
+        font-size: 20px;
+    }
+}
+.main-heading{
+    font-family: $font-dancingScript;
+    font-size: 100px;
+    font-weight: 300;
+    color: $color-primary;
+    margin-bottom: 40px;
+    @media (max-width:540px) {
+        font-size: 60px;
+    }
+}
+.sub-heading{
+    font-family: $font-josefinSans;
+    font-size: 60px;
+    font-weight: 300;
+    color: $color-secondary;
+    margin-bottom: 80px;
+    text-align: center;
+    white-space: nowrap;
+
+    @media (max-width:960px) {
+        font-size: 40px;
+    }
+    @media (max-width:540px) {
+        font-size: 25px;
+    }
+    
+}
+.main-btn{
+    width: 170px;
+    height: 45px;
+    @include textStyles($letterSpacing:2px,$textTransform:Uppercase,$fontWeight:500);
+    font-family: $font-josefinSans;
+    font-size: 14px;
+    background-color: transparent;
+    border:1px solid $color-primary;
+    color: $color-primary;
+    outline: none;
+    cursor: pointer;
+    transition: all .4s;
+    &:hover{
+        background-color: $color-primary;
+        color: $color-dark;
+    }
+}
+.card{
+    width: calc(100% / 3);
+    height: 30vw;
+    position: relative;
+    overflow: hidden;
+    &:hover &-overlay{
+        left: 0;
+    };
+    @media (max-width:720px) {
+        width: calc(100% / 2);
+        height: 50vw;
+    }
+    @media (max-width:540px) {
+        width: calc(100%);
+        height: 70vw;
+    }
+
+    &-overlay{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        @extend %fullSpace;
+        color: $color-white;
+        background: rgba($color: $color-primary, $alpha: .6);
+        z-index: 10;
+        @include flexLayout($flexDirection:column);
+        transition: all .4s;
+
+        &-heading{
+            font-family: $font-nunito;
+            @include textStyles($letterSpacing:2px,$textTransform:Capitalize,$fontWeight:initial);
+            font-size: 50px;
+            @media (max-width:720px) {
+                font-size: 30px;
+            }
+        }
+        &-paragraph{
+            font-family: $font-josefinSans;
+            @include textStyles($letterSpacing:0,$textTransform:Capitalize,$fontWeight:initial);
+            font-size: 30px;
+            margin-bottom: 30px;
+
+            @media (max-width:720px) {
+                font-size: 20px;
+            }
+        }
+        &-btn{
+            width: 150px;
+            height: 40px;
+            color: $color-primary;
+            font-family: $font-josefinSans;
+            background-color: $color-white;
+            @include textStyles($letterSpacing:1px,$textTransform:uppercase,$fontWeight:bold);
+            font-size: 14px;
+            cursor: pointer;
+            border: 1px solid $color-primary;
+            outline: none;
+            border-radius: 20px;
+            @include flexLayout();
+
+            @media (max-width:720px) {
+                width: 100px;
+                height: 40px;
+                font-size: 10px;
+            }
+        }
+    }
+    img{
+        @extend %fullSpace;
+        object-fit: cover;
+        opacity: .7;
+    }
+}
+
+.social-media{
+    @include flexLayout($justifyContent:space-between);
+    width: 300px;
+    margin-bottom: 70px;
+    &-item{
+        list-style-type: none;
+    }    
+    &-link{
+        text-decoration: none;
+        font-size: 50px;
+        color: $color-secondary;
+        transition: color .4s;
+
+        &:hover{
+            color: $color-primary;
+        }
+    }
+}

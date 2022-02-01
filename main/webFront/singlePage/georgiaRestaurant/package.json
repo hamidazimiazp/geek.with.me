@@ -1,0 +1,12 @@
+{
+  "name": "two",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass -w assets/sass/main.scss -o assets/css/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
