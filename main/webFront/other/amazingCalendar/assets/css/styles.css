@@ -1,0 +1,89 @@
+body{
+    font-family: sans-serif;
+}
+.wrapper{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.datepicker{
+    width: 475px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, .2),
+                0 15px 12px rgba(0, 0, 0, .2);
+    margin: 15px auto;
+    overflow: hidden;
+}
+.datepicker .datepicker-header{
+    height: 300px;
+    background: url("../images/bg.jpg") no-repeat center;
+    background-size: cover;
+}
+.datepicker .ui-datepicker-inline{
+    padding: 30px;
+}
+.datepicker .ui-datepicker-header{
+    text-align: center;
+    font-size: 1.4em;
+    padding-bottom: .5em;
+    letter-spacing: .1em;
+    color: #333;
+}
+.datepicker .ui-datepicker-header .ui-datepicker-prev,
+.datepicker .ui-datepicker-header .ui-datepicker-next{
+    float: left;
+    cursor: pointer;
+    font-size: pointer;
+    padding: 0 5px;
+    margin-top: -8px;
+    color : rgb(150, 150, 150);
+    transition: .6s;
+}
+.datepicker .ui-datepicker-header .ui-datepicker-next{
+    float: right;
+}
+.datepicker .ui-datepicker-header .ui-datepicker-prev:hover{
+    transform: translateX(-5px);
+}
+.datepicker .ui-datepicker-header .ui-datepicker-next:hover{
+    transform: translateX(5px);
+}
+.datepicker .ui-datepicker-calendar{
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+}
+.datepicker .ui-datepicker-calendar thead{
+    color: rgb(150, 150, 150);
+}
+.ui-datepicker-title{
+    color: rgb(97, 93, 93);
+}
+.datepicker .ui-datepicker-calendar tr th,
+.datepicker .ui-datepicker-calendar tr td{
+    margin-bottom: .4em;
+}
+.datepicker .ui-datepicker-calendar a{
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color.4s;
+}
+.datepicker .ui-datepicker-calendar a:hover{
+    background-color: #da89a2;
+    color: white;
+}
+.datepicker .ui-datepicker-calendar .ui-state-highlight{
+    background-color: #da89a2;
+    color: white;
+}
