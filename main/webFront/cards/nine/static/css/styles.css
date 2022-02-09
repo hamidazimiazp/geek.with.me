@@ -1,0 +1,86 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif !important;
+}
+.root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
+.wrapper{
+    width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wrapper .card{
+    width: calc(33% - 20px);
+    height: 300px;
+    background-color: #fff;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.wrapper .card .circle{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+    transition: all .1s linear;
+}
+.wrapper .card .circle .box,
+.wrapper .card .circle .box span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.wrapper .card .circle .box{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all .2s linear;
+}
+.wrapper .card .circle .box span,
+.wrapper .card .text{
+    font-size: 36px;
+    font-weight: 600;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    color: transparent;
+    background-clip: text;
+}
+.wrapper .card .text{
+    font-size: 24px;
+}
+.circle canvas{
+    height: 100% !important;
+    width: 100% !important;
+}
+@media screen and (max-width: 753px) {
+    .wrapper{
+        width: 700px;
+    }
+    .wrapper .card{
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 505px) {
+    .wrapper{
+        width: 700px;
+    }
+    .wrapper .card{
+        width: 100%
+    }
+}
