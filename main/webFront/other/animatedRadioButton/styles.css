@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #28aff3;
+    font-family: sans-serif;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;    
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+.container h2{
+    font-size: 35px;
+    color: #222;
+    margin-bottom: 10px;
+}
+.container .radio-btns div{
+    position: relative;
+    line-height: 40px;
+}
+.container .radio-btns div input{
+    display: none;
+}
+.container .radio-btns div label{
+    padding-left: 40px;
+    color: #222;
+    cursor: pointer;
+}
+.container .radio-btns .check{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #b1dff1;
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    cursor: pointer;
+}
+.container .radio-btns div input#male-gender ~ .check{
+    background-color: #28aff3;
+    box-shadow: 0 5 10 0 #b1dff1;
+    top: 150%;
+    z-index: 2;
+}
+.container .radio-btns div input#male-gender:checked ~ .check{
+    top: 50%;
+}
+.container .radio-btns div input#female-gender:checked ~ .check{
+    top: -50%;
+}
