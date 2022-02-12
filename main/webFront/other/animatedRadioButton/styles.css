@@ -48,7 +48,7 @@ body{
 }
 .container .radio-btns div input#male-gender ~ .check{
     background-color: #28aff3;
-    box-shadow: 0 5 10 0 #b1dff1;
+    box-shadow: 0 5px 10px 0 #b1dff1;
     top: 150%;
     z-index: 2;
 }
