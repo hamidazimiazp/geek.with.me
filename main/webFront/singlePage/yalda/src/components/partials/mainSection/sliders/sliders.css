@@ -1,0 +1,41 @@
+section.slider{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+.swiper-wrapper{
+  display: flex;
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 320px !important;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.swiper-slide img {
+  display: 250px;
+}
+.section-title h3{
+  text-align: right;
+  color: #fff;
+  padding: 25px;
+  font-size: 21px;
+  position: relative;
+}
+.section-title h3:after{
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 2px;
+  background-color: red;
+  right: 1.5%;
+  top: 80%;
+}
+@import url("./simpleSlider1/simpleSlider1.css");

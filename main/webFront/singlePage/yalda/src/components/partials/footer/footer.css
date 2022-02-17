@@ -1,0 +1,27 @@
+footer .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background: tomato;
+    padding: 23px;
+    border-radius: 10px;
+}
+.footer .content .right-content{
+    direction: rtl;
+}
+.footer .content .btn-invite {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: tomato;
+    background: #fff;
+    transition: all .4s;
+}
+.footer .content .btn-invite:hover{
+    color: #fff;
+    background: tomato;
+    border: 1px solid #fff;
+}

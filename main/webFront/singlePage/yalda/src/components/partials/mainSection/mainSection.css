@@ -1,0 +1,9 @@
+section{
+  background-color: #262626;
+}
+@import url("./timer/timer.css");
+@import url("./giftSection/giftSection.css");
+@import url("./sliders/sliders.css");
+@import url("./categories/categories.css");
+@import url("./banners/banners.css");
+@import url("./comments/comments.css");

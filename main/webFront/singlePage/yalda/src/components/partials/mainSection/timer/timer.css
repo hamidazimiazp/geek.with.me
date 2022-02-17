@@ -1,0 +1,21 @@
+.countDownTimer{
+    color : #fff;
+    text-align: center;
+}
+.countDownTimer .time {
+    width: 80px;
+    display: inline-flex;
+    height: 55px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #000;
+    margin: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    vertical-align: 12px;
+}
+.countDownTimer h5{
+    line-height: 75px;
+}

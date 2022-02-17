@@ -1,0 +1,81 @@
+.giftCenter{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url("../../../../assets/images/nav-img-1.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+.giftCenter h2{
+    font-family: "suls";
+    color: #fff;
+    font-size: 2.5em;
+}
+.giftCenter img{
+    cursor: pointer;
+    width: 150px;
+    transition: all .4s;
+}
+@media screen and (max-width : 540px){
+    .giftCenter img{
+        width: 100px;
+    }
+}
+.giftCenter img:hover{
+    transform: scale(1.1);
+}
+.giftCenter-cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url("../../../../assets/images/nav-img-1.jpg") no-repeat center;
+    background-size: cover;
+    display: none;
+}
+.giftCenter-cover h2{
+    font-family: "iranSans";
+    text-align: center;
+}
+.discount-input-group{
+    padding: 12px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+.discount-input-group .input{
+    margin-right: 25px;
+    height: 50px;
+    width: 290px;
+    text-align: center;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+.discount-input-group .icon i {
+    font-size: 30px;
+    cursor: pointer;
+    transition: all .4s;
+}
+.discount-input-group .icon:hover i{
+    color: tomato;
+}
+.next-arrow img{
+    width: 80px;
+    height: 80px;
+}
+.Toastify{
+    text-align: center !important;
+}
+h5.discount-title{
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    padding-right: 60px;
+}

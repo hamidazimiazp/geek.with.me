@@ -1,0 +1,94 @@
+a.product{
+    text-decoration: none;
+    color: #262626;
+}
+.glass-card{
+    position: relative;
+}
+.pomegranate{
+    position: absolute;
+    top: -15%;
+    left: 40%;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%, 50%);
+}
+.pomegranate img{
+    width: 100px;
+    height: 100px;
+}
+.glass-card-header {
+    border-bottom: 2px solid #ffebe7;
+    font-family: "iranYekan" !important;    
+
+}
+.glass-card-body{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.price{
+    display: flex;
+    flex-direction: column;
+}
+.new-price, .old-price{
+    direction: rtl;
+    padding-left: 10px;
+    font-family: "iranYekan" !important;    
+}
+.new-price .amount{
+    font-size: 20px;
+}
+.new-price .amountLabel{
+    vertical-align: 3px;
+    margin-right: 3px;
+    font-size: 15px;
+}
+.old-price del{
+    font-size: 13px;
+    margin-left: 20px;
+}
+.discount{
+    font-size: 14px;
+    background: red;
+    color: #fff;
+    height: 35px;
+    border-radius: 50%;
+    width: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+.progress-counter{
+    height: 5px;
+    background-color: rgb(224, 215, 215);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+}
+.progress-counter.one{
+    width: 100%;
+    z-index: 1;
+}
+.progress-counter.two{
+    background-color: red;
+    z-index: 2;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.info a.more-btn{
+    text-decoration: none;
+    margin-top: 23px !important;
+    font-size: 15px !important;
+    text-indent: -20px !important;
+    color: #fb00fb !important;
+}
+h4{
+    font-size: 16px !important;
+    text-align: center !important;
+}

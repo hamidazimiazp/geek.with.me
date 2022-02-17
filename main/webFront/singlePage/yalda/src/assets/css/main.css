@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "iranSans";
+    src: url('../fonts/iranSans.TTF');
+}
+@font-face {
+    font-family: "suls";
+    src: url('../fonts/Suls.ttf');
+}
+@font-face {
+    font-family: "iranYekan";
+    src: url('../fonts/IYEKAN.TTF');
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "iranSans", "iranYekan", tahoma;
+    overflow-x: hidden;
+    user-select: none;
+}
+/* loader styles */
+@import url("../../components/partials/loader/loader.css");
+/* header styles */
+@import url("../../components/partials/header/header.css");
+/* navbar styles */
+@import url("../../components/partials/navbar/navbar.css");
+/* main styles */
+@import url("../../components/partials/mainSection/mainSection.css");
+/* footer styles */
+@import url("../../components/partials/footer/footer.css");
