@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+.root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #647df9;
+    padding: 20px;
+}
+.wrapper{
+    max-width: 1090px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.wrapper .table{
+    width: calc(33% - 20px);
+    background: #fff;
+    padding: 30px;
+    border-radius: 7px;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}   
+.wrapper .table ::selection{
+    color: #fff;
+}
+.wrapper .table:nth-child(2){
+    transform: scale(1.1);
+}
+@media screen and (max-width: 720px) {
+    .wrapper .table:nth-child(2){
+        transform: scale(1);
+    }
+    .wrapper .table{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }   
+}
+@media screen and (max-width: 540px) {
+    .wrapper{
+        justify-content: center;
+    }
+    .wrapper .table{
+        width: calc(100% - 20px);
+    }   
+}
+@media screen and (max-width: 320px) {
+    .root{
+        padding: 10px;
+    }
+    .wrapper .table{
+        width: 100%;
+    }   
+}
+.table .price-section{
+    display: flex;
+    justify-content: center;
+}
+.price-section .price-area{
+    height: 120px;
+    width: 120px;
+    background-color: #ffd861;
+    border-radius: 50%;
+    padding: 2px;
+}
+.price-area .inner-area{
+    width: 100%;
+    height: 100%;
+    background-color: #ffd861;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.price-area .inner-area .text{
+    font-size: 25px;
+    font-weight: 400;
+    position: absolute;
+    top: 30px;
+    left: 17px;
+}
+.price-area .inner-area .price{
+    font-size: 45px;
+    font-weight: 500;
+    margin-left: 16px;
+}
+.table .package-name{
+    width: 100%;
+    height: 2px;
+    background-color: #ffecb3;
+    margin: 35px 0;
+    position: relative;
+}
+.table.premium .package-name{
+    background-color: #a26bfa;
+}
+.table.ultimate .package-name{
+    background-color: #43ef8b;
+}
+.table .package-name::after{
+    content: attr(date-pack-name);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0 15px;
+}
+.table .features li{
+    margin-bottom: 15px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+}
+.table .features li .list-name{
+    font-size: 17px;
+    font-weight: 400;
+}
+.table .features li .icon{
+    font-size: 15px;
+}
+.table .features li .icon.check{
+    color: #2bd94d;
+}
+.table .features li .icon.cross{
+    color: #cd3241;
+}
+.table .btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+.table .btn button{
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background-color: #ffd861;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color .3s;
+}
+.basic .price-area,
+.basic .inner-area,
+.basic ::selection{
+    background-color:#ffd861;
+}
+.basic .btn button{
+    background-color: #fff;
+    color: #ffd861;
+    border: 2px solid #ffd861;
+}
+.basic .btn button:hover{
+    background-color: #ffd861;
+    color: #fff;
+}
+.premium .price-area,
+.premium .inner-area,
+.premium .btn button,
+.premium ::selection{
+    background-color:#a26bfa;
+}
+.premium .btn button:hover{
+    background-color: #fff;
+    border: 2px solid #a26bfa;
+    color: #a26bfa;
+}
+.ultimate .price-area,
+.ultimate .inner-area,
+.ultimate ::selection{
+    background-color:#43ef8b;
+}
+.ultimate .btn button{
+    background-color: #fff;
+    color: #43ef8b;
+    border: 2px solid #43ef8b;
+}
+.ultimate .btn button:hover{
+    background-color: #43ef8b;
+    color: #fff;
+}
+.table .ribbon{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    overflow: hidden;
+}
+.table .ribbon::before,
+.table .ribbon::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    display: block;
+    border: 7px solid #4606ac;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+.table .ribbon::before{
+    top: 0;
+    right: 25px;
+}
+.table .ribbon::after{
+    bottom: 25px;
+    left: 0;
+}
+.table .ribbon span{
+    position: absolute;
+    background: #a26bfa;
+    width: 200px;
+    padding: 10px 0px;
+    color: #fff;
+    text-align: center;
+    top: 30px;
+    right: 0;
+    transform: rotate(-45deg);
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
