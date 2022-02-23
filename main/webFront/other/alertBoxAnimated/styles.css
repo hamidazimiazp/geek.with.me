@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html,body{
+    height: 100%
+}
+body{
+    display: grid;
+    place-items:center;
+    overflow: hidden;
+}
+.alert{
+    background: #ffdb9b;
+    padding: 30px 40px;
+    min-width: 420px;
+    position: absolute;
+    height: 0px;
+    right: 0px;
+    top: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-left: 8px solid #ffa502;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+.alert.showAlert{
+    opacity: 1;
+    pointer-events: auto;
+}
+.alert.show{
+    animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide {
+    0%{
+      transform: translateX(100%);
+    }
+    40%{
+      transform: translateX(-30%);
+    }
+    80%{
+      transform: translateX(0%);
+    }
+    100%{
+      transform: translateX(-10px);
+    }
+}
+.alert.hide{
+    animation: hide_slide 1s ease forwards;
+}
+@keyframes hide_slide {
+    0%{
+      transform: translateX(-0%);
+    }
+    40%{
+      transform: translateX(0%);
+    }
+    80%{
+      transform: translateX(-30%);
+    }
+    100%{
+      transform: translateX(100%);
+    }
+}
+.alert .icon-exclamation-circle{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #ce8500;
+    font-size: 30px
+}
+.alert .msg{
+    padding: 0 20px;
+    font-size: 18px;
+    color: #ce8500;
+}
+.alert .close-btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #ffd080;
+    padding: 20px 18px;
+    cursor: pointer;
+}
+.alert .close-btn:hover{
+    background: #ffc766;
+}
+.alert .close-btn .icon-times{
+    color: #ce8500;
+    font-size: 22px;
+    line-height: 40px
+}
+button.btn{
+    padding: 8px 16px;
+    background: #e69100;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
