@@ -14,7 +14,7 @@ body{
     overflow: hidden;
 }
 .alert{
-    background: #ffdb9b;
+    background: #006fb9;
     padding: 30px 40px;
     min-width: 420px;
     position: absolute;
@@ -23,7 +23,7 @@ body{
     top: 10px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    border-left: 8px solid #ffa502;
+    border-left: 8px solid #004693;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,34 +74,34 @@ body{
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    color: #ce8500;
+    color: #fff;
     font-size: 30px
 }
 .alert .msg{
     padding: 0 20px;
     font-size: 18px;
-    color: #ce8500;
+    color: #fff;
 }
 .alert .close-btn{
     position: absolute;
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background: #ffd080;
+    background: #0097ce;
     padding: 20px 18px;
     cursor: pointer;
 }
 .alert .close-btn:hover{
-    background: #ffc766;
+    background: #004693;
 }
 .alert .close-btn .icon-times{
-    color: #ce8500;
+    color: #fff;
     font-size: 22px;
     line-height: 40px
 }
 button.btn{
     padding: 8px 16px;
-    background: #e69100;
+    background: #004693;
     font-size: 25px;
     border: none;
     outline: none;
