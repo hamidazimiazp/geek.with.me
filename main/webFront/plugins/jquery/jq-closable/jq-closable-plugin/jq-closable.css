@@ -10,4 +10,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all .3s;
+}
+.closeBTN:hover{
+    opacity: 0.5;
 }
