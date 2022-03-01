@@ -1,4 +1,4 @@
-> How To Use 
+## How To Use 
     element.closable({
         animation: "fadeOut",
         top: "10px",
