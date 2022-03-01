@@ -18,7 +18,7 @@
                 elm.css("position", "relative");
             }
 
-            // creeate close button
+            // create close button
             let closeBTN = $("<span>&times;</span>").attr("class", "closeBTN");
 
             // event
