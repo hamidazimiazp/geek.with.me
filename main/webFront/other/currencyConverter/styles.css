@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: blueviolet;
+}
+.wrapper{
+    background-color: #fff;
+    width: 400px;
+    border-radius: 7px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.wrapper header{
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+.wrapper form{
+    margin: 40px 0 20px 0;
+}
+form :where(input, select, button){
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+form p{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+form input{
+    font-size: 17px;
+    border: 1px solid #999;
+    height: 50px;
+    padding: 0 15px;
+}
+form input:focus{
+    border: 2px solid blueviolet;
+    padding: 0 14px;
+}
+form .drop-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+form .drop-list .select-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 115px;
+    border: 1px solid #999;
+    border-radius: 7px;
+    cursor: pointer;
+    position: relative;
+}
+form .drop-list .select-box select{
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    padding: 0 0 0 35px;
+    background-color: transparent;
+    z-index: 2;
+    scrollbar-color: #ccc #f1f1f1;
+    scrollbar-width: thin;
+}
+form .drop-list .select-box select::-webkit-scrollbar{
+    width: 8px;
+}
+form .drop-list .select-box select::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+form .drop-list .select-box select::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 8px;
+    border-right: 2px solid #fff;
+}
+form .drop-list .select-box img{
+    max-width: 25px;
+    position: absolute;
+    left: 10px;
+}
+form .drop-list .icon{
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+form .exchange-rate{
+    font-size: 17px;
+    margin: 20px 0 30px;
+}
+form button{
+    height: 52px;
+    color: #fff;
+    background-color: blueviolet;
+    font-size: 17px;
+    cursor: pointer;
+}
