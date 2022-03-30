@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+}
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn-menu{
+    position: relative;
+    width: 220px;
+    height: 120px;
+}
+.btn-menu .share-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    background: #00acee;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.btn-menu .share-btn > :last-child{
+    display: none;
+}
+.btn-menu.active  .share-btn > :first-child{
+    display: none;
+}
+.btn-menu.active  .share-btn > :last-child{
+    display: inline;
+}
+.btn-menu .social-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    background-color: #fff;
+    color: #222;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: all 300ms ease-in-out;
+    border: 2px solid #00acee;
+}
+.btn-menu.active .social-btn{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.btn-menu.active div:nth-child(2){
+    top: -25%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transition: all 300ms ease-in-out 0ms;
+    
+}
+.btn-menu.active div:nth-child(3){
+    top: 0%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-in-out 80ms;
+}
+.btn-menu.active div:nth-child(4){
+    top: 100%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-in-out 160ms;
+}
+.btn-menu.active div:nth-child(5){
+    top: 125%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: all 300ms ease-in-out 240ms;
+}
+.btn-menu.active div:nth-child(6){
+    top: 100%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-in-out 320ms;
+}
+.btn-menu.active div:nth-child(7){
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-in-out 400ms;
+}
