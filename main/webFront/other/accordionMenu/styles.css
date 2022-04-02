@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "terafik";
+    src: url("terafik.TTF");
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "terafik";
+}
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordion-menu{
+    width: 550px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 7px;
+}
+.accordion-item-heading{
+    border: 1px solid orange;
+    padding: 10px;
+    text-align: right;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    color: #fff;
+    cursor: pointer;
+    font-weight: normal;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+}
+.accordion-menu .accordion-item:first-child .accordion-item-heading{
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.accordion-item-heading .toggle-arrow{
+    transition: all .4s linear;
+}
+.accordion-item-heading .toggle-arrow::before{
+    content: '\203A';
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 36px;
+    color:#fff;
+}
+.accordion-item-heading.active .toggle-arrow{
+    transform: rotate(-90deg);
+}
+.accordion-item-body{    
+    border: 1px solid orange;
+    display: none;
+}
+.accordion-item-body p {
+    padding: 20px;
+    text-align: justify;
+    direction: rtl;
+}
