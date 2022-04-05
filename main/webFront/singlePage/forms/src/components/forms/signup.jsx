@@ -117,7 +117,7 @@ const SignUp = () => {
                 {errors.confirmPassword && touched.confirmPassword && <span className='input-error'>{errors.confirmPassword}</span>}
 
                 <div className="isAccepted">
-                    <label htmlFor="isAccepted" className="isAccepted">I accet terms of privacy policy</label>
+                    <label htmlFor="isAccepted" className="isAccepted">I accept terms of privacy policy</label>
                     <input
                         onChange={onChangeHandler}
                         type="checkbox"
