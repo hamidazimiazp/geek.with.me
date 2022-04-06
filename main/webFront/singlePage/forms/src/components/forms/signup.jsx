@@ -129,7 +129,7 @@ const SignUp = () => {
                 </div>
                 {errors.isAccepted && touched.isAccepted && <span className='input-error'>{errors.isAccepted}</span>}
 
-                <button type="submit">Log In</button>
+                <button type="submit">Submit</button>
                 <div className="have-account">
                     Already Have An Account! <Link to="/signin">SignIn</Link>
                 </div>
