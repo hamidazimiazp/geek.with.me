@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .card {
+    width: 350px;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.wrapper .card .card-header {
+    text-align: center;
+    line-height: 66px;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: orange;
+    font-weight: bold;
+}
+
+.wrapper .card .card-body {
+    text-align: center;
+}
+
+.wrapper .card .card-body input {
+    width: calc(100% - 20px);
+    line-height: 40px;
+    outline: none;
+    border: 1px solid orange;
+    text-indent: 12px;
+    caret-color: orange;
+    border-radius: 4px;
+}
+
+.input-error {
+    font-size: 10px;
+    margin: 14px 0 0 12px;
+    color: red;
+    display: none;
+    text-align: left;
+}
+
+.wrapper .card .card-body .btn {
+    width: calc(100% - 20px);
+    line-height: 40px;
+    cursor: pointer;
+    margin-top: 25px;
+    outline: none;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+.wrapper .card .card-body .btn:hover {
+    background-color: #fff;
+    border: 1px solid orange;
+    color: orange;
+}
+
+.card-result {
+    text-align: center;
+    padding: 15px;
+}
+
+.card-result img {
+    width: 150px;
+}
