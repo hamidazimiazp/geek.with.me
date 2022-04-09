@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    user-select: none;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+}
+
+.container {
+    width: 90%;
+    height: 90vh;
+    background: #fff url("bg.jpg") no-repeat center center;
+    border-radius: 12px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container .content {
+    text-align: center;
+}
+
+.container .content h1 {
+    font-size: 18em;
+    line-height: 1em;
+    color: #fff;
+}
+
+.container .content h4 {
+    position: relative;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fea500;
+    background: #fff;
+    font-weight: 400;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 7px;
+}
+
+.container .content p {
+    color: #fff;
+    font-size: 1.3em;
+    width: 600px;
+    margin-top: 20px;
+    line-height: 1.5em;
+}
+
+.btn {
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    border-radius: 7px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #fea500;
+    color: #fff;
+    transition: all .4s;
+    text-decoration: none;
+    line-height: 50px;
+}
+
+.btn:hover {
+    background: #fea500;
+    border: none;
+    color: #000;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+@media screen and (max-width : 540px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .container .content h1 {
+        font-size: 14em;
+    }
+
+    .container .content h4 {
+        font-size: 1.1em;
+    }
+
+    .container .content p {
+        width: 400px;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .container .content h1 {
+        font-size: 10em;
+    }
+
+    .container .content h4 {
+        font-size: .9em;
+    }
+
+    .container .content p {
+        width: 300px;
+        font-size: .9em;
+    }
+}
