@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101010;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container .card {
+    position: relative;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+    height: 300px;
+    border-radius: 4px;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.container .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+}
+
+.circular {
+    height: 100px;
+    width: 100px;
+    transform: scale(2);
+}
+
+.circular .inner {
+    position: absolute;
+    z-index: 7;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    margin: -40px 0 0 -40px;
+    background: #222;
+    border-radius: 50%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+}
+
+.circular .bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #191919;
+    border-radius: 50%;
+    clip: rect(0px, 100px, 100px, 50px);
+
+}
+
+.circular .bar .progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    clip: rect(0px, 50px, 100px, 0);
+    background: red;
+}
+
+.circular .bar.left .progress {
+    z-index: 1;
+    animation: left 4s linear both;
+}
+
+@keyframes left {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.circular .bar.right {
+    z-index: 3;
+    transform: rotate(180deg);
+}
+
+.circular .bar.right .progress {
+    z-index: 3;
+    animation: right 4s linear both;
+    animation-delay: 4s;
+}
+
+@keyframes right {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.circular .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+
+.card:nth-child(1) .progress {
+    background-color: cyan;
+}
+
+.card:nth-child(2) .progress {
+    background-color: ref;
+}
+
+.card:nth-child(3) .progress {
+    background-color: orange;
+}
