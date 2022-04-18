@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    user-select: none;
+    overflow-y: hidden;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0cbaba;
+    background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%);
+
+}
+
+.wrapper .nav {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+        rgba(0, 0, 0, 0.07) 0px 2px 4px,
+        rgba(0, 0, 0, 0.07) 0px 4px 8px,
+        rgba(0, 0, 0, 0.07) 0px 8px 16px,
+        rgba(0, 0, 0, 0.07) 0px 16px 32px,
+        rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    position: relative;
+}
+
+.wrapper .nav-item {
+    position: relative;
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+    transition: all .4s;
+}
+
+.wrapper .nav .nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #111;
+    transition: all .4s;
+    opacity: 0;
+}
+
+.wrapper .nav .nav-item:not(.is-active):hover {
+    color: red;
+}
+
+.wrapper .nav .nav-item:not(.is-active):hover::after {
+    opacity: 1;
+    bottom: 0;
+}
+
+.nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    transition: all .4s;
+    z-index: 1;
+}
