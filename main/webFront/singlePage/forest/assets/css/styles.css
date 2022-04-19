@@ -1,0 +1,143 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    background: url('../images/bg.jpg') no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.logo {
+    line-height: 40px;
+    float: left;
+    margin: 1.2em 0 0 2.2em;
+    font-weight: bolder;
+    color: #fff;
+    opacity: 0
+}
+
+.nav {
+    line-height: 40px;
+    margin-top: 1.2em;
+    position: absolute;
+    right: 4.2em;
+}
+
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 36px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none
+}
+
+.social-media {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.social-media ul li {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media ul li a i.fa-facebook {
+    margin-left: 3px;
+}
+
+.side-strip {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -4em;
+    transform: rotate(90deg);
+    color: #fff;
+    letter-spacing: 4px;
+}
+
+.header {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50% -50%);
+    width: 50%;
+}
+
+.header h1 {
+    color: #fff;
+    font-weight: lighter;
+}
+
+.header p {
+    color: #fff;
+    font-weight: lighter;
+}
+
+.header button {
+    margin-top: 12px;
+    border: none;
+    padding: 16px 40px;
+    background-color: #fff;
+    color: #000;
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.buttom-bar {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 7%;
+}
+
+.bg_bottom {
+    padding: 2.6em 2.6em 2em 2.6em;
+    background-color: #000;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.buttom-bar h6 {
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.buttom-bar p {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.overlay {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+}
+
+.overlay h1 {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50% -50%);
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 12px;
+}
