@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    user-select: none;
+}
+
+.wrapper .toggle-btn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+
+.wrapper .toggle-btn .line {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    transition: all 1s;
+}
+
+.wrapper .toggle-btn.active {
+    transform: rotate(90deg);
+}
+
+.wrapper .toggle-btn.active .line {
+    background-color: cyan;
+}
+
+.wrapper .toggle-btn.active .line:nth-child(1) {
+    transform: rotate(-40deg) translate(-21px, 20px);
+}
+
+.wrapper .toggle-btn.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.wrapper .toggle-btn.active .line:nth-child(3) {
+    transform: rotate(40deg);
+}
+
+.wrapper nav {
+    height: 100vh;
+    background: rgb(40, 21, 65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    transition: .4s linear;
+}
+
+.wrapper .toggle-btn.active~nav {
+    top: 0;
+}
+
+.wrapper nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.wrapper nav ul li {
+    line-height: 70px;
+}
+
+.wrapper nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 36px;
+    transition: all .3s ease-in-out;
+}
+
+.wrapper nav ul li:hover a {
+    letter-spacing: 2px;
+    color: cyan;
+}
