@@ -1,0 +1,108 @@
+body {
+    background-color: #fff;
+    user-select: none;
+    font-family: sans-serif;
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.card .content {
+    height: 369px;
+    width: 290px;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
+    position: relative;
+}
+
+.card {
+    height: 379px;
+    width: 300px;
+    background: #808080;
+    border-radius: 10px;
+    transition: background 0.8s;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 70px 63px -60px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 20px;
+}
+
+@media screen and (max-width : 540px) {
+    .card {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.card-0 {
+    background: url("images/avatar-1.jpg") center center no-repeat;
+    background-size: 300px;
+}
+
+.card-1 {
+    background: url("images/avatar-2.jpg") center center no-repeat;
+    background-size: 300px;
+}
+
+.card-2 {
+    background: url("images/avatar-3.jpg") center center no-repeat;
+    background-size: 300px;
+}
+
+.card:hover {
+    background-position: left center;
+    background-size: 600px;
+}
+
+.card h2 {
+    color: #fff;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.card:hover h2 {
+    opacity: 1;
+}
+
+.card .icons {
+    position: absolute;
+    height: 130px;
+    top: 226px;
+    width: 50px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card .icons a {
+    color: #fff;
+    transition: .3s linear all;
+}
+
+.card .icons a:hover {
+    color: rgb(98, 210, 241);
+}
+
+.card .fa {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.card:hover .fa {
+    opacity: 1;
+}
