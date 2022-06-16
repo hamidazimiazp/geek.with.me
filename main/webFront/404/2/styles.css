@@ -1,0 +1,69 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    user-select: none;
+}
+
+h1.notfound {
+    font-size: 350px;
+    font-family: sans-serif;
+    position: relative;
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+@media screen and (max-width : 540px) {
+    h1.notfound {
+        font-size: 300px
+    }
+}
+
+@media screen and (max-width : 420px) {
+    h1.notfound {
+        font-size: 220px
+    }
+}
+
+@media screen and (max-width : 420px) {
+    h1.notfound {
+        font-size: 180px
+    }
+}
+
+@keyframes geek {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 400% 0;
+    }
+}
+
+h1.notfound:before {
+    content: "";
+    display: block;
+    position: absolute;
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    background-image: repeating-linear-gradient(-45deg,
+            transparent, transparent 1em, red 1em, orange 50%),
+        repeating-linear-gradient(45deg,
+            #111626, #111626 1em, gold 1em, blue 50%);
+    background-size: 3em 3em, 2em 2em;
+    animation-name: geek;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
