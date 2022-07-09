@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin&display=swap');
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Anek Latin', sans-serif;
+    min-height: 100vh;
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.container {
+    width: 850px;
+    height: 400px;
+    background-size: cover;
+    filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.30));
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    border-radius: 10px;
+}
+
+.glass {
+    width: 100%;
+    height: 100%;
+    background: url("bg.jpg") center center no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+}
