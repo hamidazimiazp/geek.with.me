@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+body {
+  font-family: sans-serif;
+  background-color: #121212;
+  overflow-x: hidden;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.wrapper ul.list-wrapper {
+  list-style-type: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 700px;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.wrapper ul.list-wrapper li {
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  background-color: #1f1f1f;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  border-radius: 7px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation: animate 3s linear infinite;
+  text-shadow: 0 0 30px #ffea00, 0 0 70px #ffea00, 0 0 100px #ffea00,
+    0 0 100px #ffea00;
+}
+.wrapper ul.list-wrapper li:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+.wrapper ul.list-wrapper li:nth-of-type(3) {
+  animation-delay: 0.5s;
+}
+.wrapper ul.list-wrapper li:nth-of-type(4) {
+  animation-delay: 0.3s;
+}
+.wrapper ul.list-wrapper li:nth-of-type(5) {
+  animation-delay: 0.1s;
+}
+.wrapper ul.list-wrapper li a i {
+  color: #fff;
+  font-size: 60px;
+}
+@keyframes animate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
