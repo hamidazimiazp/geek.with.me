@@ -1,7 +1,7 @@
 // Geek.With.Me
 //Todo: ajax - [get method] for get model names
 const modelSelector = document.querySelector(".model-selector");
-const modelSelectorQuery = document.querySelector("model-search-box");
+const modelSelectorQuery = document.querySelector(".model-search-box");
 const modelSelectorItemsWrapper = document.querySelector(".model-items");
 const modelSelectorItemSelected = document.querySelector(".selected-model");
 const modelSelectorSearch = document.querySelector(".model-search-box input");
