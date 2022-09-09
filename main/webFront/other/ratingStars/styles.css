@@ -1,0 +1,33 @@
+body {
+  background-color: #ecf0f3;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  user-select: none;
+}
+.rating {
+  display: block;
+  direction: rtl;
+  text-align: center;
+}
+.rating .star {
+  display: none;
+}
+.rating label {
+  color: rgb(203, 203, 203);
+  display: inline-block;
+  font-size: 40px;
+  margin: 0 -2px;
+  transition: transform 0.15s ease;
+  cursor: pointer;
+}
+.rating label:hover {
+  transform: scale(1.35, 1.35);
+}
+.rating label:hover,
+.rating label:hover ~ label {
+  color: orange;
+}
+.rating .star:checked ~ label {
+  color: orange;
+}
