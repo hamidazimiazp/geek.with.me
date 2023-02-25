@@ -1,0 +1,63 @@
+body {
+  background: #1e1e1e;
+}
+#loader {
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -20px -50px;
+}
+#loader .ball {
+  width: 20px;
+  height: 20px;
+  background: #00b181;
+  border-radius: 50%;
+  position: absolute;
+}
+#b1 {
+  animation: animate 2s linear infinite;
+}
+#b2 {
+  animation: animate 2s linear infinite -0.4s;
+}
+#b3 {
+  animation: animate 2s linear infinite -0.8s;
+}
+#b4 {
+  animation: animate 2s linear infinite -1.2s;
+}
+#b5 {
+  animation: animate 2s linear infinite -1.6s;
+}
+@keyframes animate {
+  0% {
+    left: 100px;
+    top: 0;
+  }
+  80% {
+    left: 0;
+    top: 0;
+  }
+  85% {
+    left: 0;
+    top: -20px;
+    width: 20px;
+    height: 20px;
+  }
+  90% {
+    width: 40px;
+    height: 15px;
+  }
+  95% {
+    left: 100px;
+    top: -20px;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 100px;
+    top: 0;
+  }
+}
