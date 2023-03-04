@@ -1,0 +1,18 @@
+.root {
+  overflow: hidden;
+}
+.infinite-sc {
+  background: url("img.jpg") repeat-x;
+  height: 645px;
+  width: 5760px;
+  animation: slide 60s linear infinite;
+  background-size: contain;
+}
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1920px, 0, 0);
+  }
+}
