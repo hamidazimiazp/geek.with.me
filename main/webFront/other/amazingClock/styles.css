@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-color: #1e1e1e;
+}
+.clock {
+  width: 576px;
+  height: 576px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: relative;
+  box-shadow: 0 60px 40px -7px rgba(0, 0, 0, 0.2);
+}
+.clock .numbers {
+  width: inherit;
+  height: inherit;
+  position: relative;
+}
+.clock .numbers div {
+  position: absolute;
+  color: #fff;
+  font-size: 40px;
+}
+.clock .numbers div.twelve {
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.clock .numbers div.three {
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+.clock .numbers div.six {
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.clock .numbers div.nine {
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+.clock .arrows {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock .arrows::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 3.2px 3.2px 8px #777;
+  z-index: 10;
+}
+.clock .arrows div {
+  width: 11.2px;
+  height: 192px;
+  background-color: #fff0f5;
+  position: absolute;
+  bottom: 50%;
+  box-shadow: 3.2px 3.2px 8px #777;
+  border-radius: 100% 100% 0 0;
+  transform-origin: bottom center;
+}
+.clock .arrows div.hour {
+  height: 116px;
+  transform: rotate(90deg);
+}
+
+.clock .arrows div.second {
+  background-color: #eb6160;
+  transform: rotate(270deg);
+}
