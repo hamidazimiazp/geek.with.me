@@ -1,0 +1,75 @@
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+* {
+  box-sizing: border-box;
+}
+.btn-shine {
+  position: relative;
+  color: #0e84d4;
+  background: #031f32;
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 999px;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+  transition: all 150ms ease;
+  font-size: 16px;
+  font-weight: 600;
+}
+.btn-shine div {
+  position: relative;
+  background: #010d14;
+  padding: 12px 32px;
+  border-radius: 999px;
+  box-shadow: inset 0 -8px 4px rgba(29, 155, 240, 0);
+  transition: all 0.2s ease;
+}
+.btn-shine:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 16px);
+  left: calc(50% - 16px);
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  box-shadow: 0 24px 32px 2px #1d9bf0;
+  animation: shinebright 8s linear infinite;
+  transition: all 0.4s ease;
+}
+.btn-shine:hover {
+  color: #1d9bf0;
+}
+.btn-shine:hover div {
+  box-shadow: inset 0 -8px 12px rgba(29, 155, 240, 0.1);
+}
+.btn-shine:hover:before {
+  animation-play-state: paused;
+  box-shadow: 0 24px 32px 12px #1d9bf0;
+}
+.btn-shine:active {
+  transform: scale(0.98) translateY(1px);
+}
+.btn-shine:active:before {
+  box-shadow: 0 24px 32px 42px #1d9bf0;
+}
+
+@keyframes shinebright {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-32px) rotate(90deg);
+  }
+  75% {
+    transform: translateX(32px) rotate(270deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
